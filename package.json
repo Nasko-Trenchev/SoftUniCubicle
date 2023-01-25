@@ -1,0 +1,23 @@
+{
+  "name": "softunicubicle",
+  "version": "1.0.0",
+  "description": "Softuni course project - Express",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nasko-Trenchev/SoftUniCubicle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nasko-Trenchev/SoftUniCubicle/issues"
+  },
+  "homepage": "https://github.com/Nasko-Trenchev/SoftUniCubicle#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
