@@ -16,8 +16,6 @@ app.use(express.static("src/public"))
 app.use(routs);
 
 
-
-
 app.listen(config.PORT, () => {
     console.log(`Server is listening on port ${config.PORT}...`);
 })
