@@ -1,11 +1,17 @@
 const express = require('express');
+
 const config = require("./config");
+const setupViewEngine = require("./config/viewEngine");
+
+//Directly involed function 
+//require('./config/viewEngine')(app);
 
 const app = express();
+setupViewEngine(app);
+
 
 app.get("/", (req,res) =>{
-
-    res.send("Homepage")
+    res.render('home', {layout: false})
 });
 
 app.listen(config.PORT, () => {
