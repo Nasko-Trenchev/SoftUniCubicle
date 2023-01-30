@@ -20,4 +20,4 @@ initDatabase()
 .then(app.listen(config.PORT, () => {
     console.log(`Server is listening on port ${config.PORT}...`);
 }))
-.catch((err) => console.log(err));
+.catch((err) => console.log(err.message));
