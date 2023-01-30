@@ -26,13 +26,15 @@ exports.getDetails = async (req,res) =>{
 
     //let cube = db.cubes.find(x => x.id === cubeId)
 
-    let cube = await Cube.findById(req.params.cubeId).lean();
+    let cube = await Cube.findById(req.params.cubeId).populate('accessories').lean();
+
+
 
     if(!cube){
         return res.redirect("/404");
     }
 
-    res.render("details", {cube});
+    res.render("cube/details", {cube});
 }
 
 
