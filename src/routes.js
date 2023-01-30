@@ -1,5 +1,6 @@
 const cubeControler = require("./controlers/cubeControler")
 const homeControler = require("./controlers/homeControler")
+
 const router = require("express").Router()
 
 router.get("/", homeControler.getHomePage);
