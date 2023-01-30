@@ -15,6 +15,7 @@ const cubeShema = new mongoose.Schema({
         type: String,
         required: true,
         //addHttps validation
+        match: /^https?:\/\//,
     },
     difficultyLevel: {
         type: Number,
