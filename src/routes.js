@@ -1,5 +1,6 @@
 const cubeControler = require("./controlers/cubeControler")
 const homeControler = require("./controlers/homeControler")
+const accesorryControler = require('./controlers/accessoryControler');
 
 const router = require("express").Router()
 
@@ -11,5 +12,7 @@ router.get('/create', cubeControler.getCreateCube);
 router.post('/create', cubeControler.postCreateCube)
 router.get('/details/:cubeId', cubeControler.getDetails)
 
+
+router.use('/accessory', accesorryControler);
 
 module.exports = router;
