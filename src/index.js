@@ -2,7 +2,6 @@ const express = require('express');
 
 const config = require("./config");
 const setupViewEngine = require("./config/viewEngine");
-const cubeControler = require("./controlers/cubeControler")
 
 const routs = require("./routes");
 
@@ -10,6 +9,7 @@ const routs = require("./routes");
 //require('./config/viewEngine')(app);
 
 const app = express();
+
 setupViewEngine(app);
 
 app.use(express.static("src/public"))
