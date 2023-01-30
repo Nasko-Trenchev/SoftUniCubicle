@@ -10,9 +10,10 @@ router.get('/404', homeControler.getErrorPage);
 
 router.get('/create', cubeControler.getCreateCube);
 router.post('/create', cubeControler.postCreateCube)
-router.get('/details/:cubeId', cubeControler.getDetails)
+router.get('/cubes/:cubeId/details', cubeControler.getDetails)
 
 router.get('/cubes/:cubeId/attach', cubeControler.getAttachAccessory);
+router.post('/cubes/:cubeId/attach', cubeControler.postAttachAccessory);
 
 
 router.use('/accessory', accesorryControler);
