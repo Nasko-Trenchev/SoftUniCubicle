@@ -7,8 +7,7 @@ const setupViewEngine = require("./config/viewEngine");
 const routs = require("./routes");
 const initDatabase = require("./config/databaseInit");
 
-//Directly involed function 
-//require('./config/viewEngine')(app);
+
 
 const app = express();
 
