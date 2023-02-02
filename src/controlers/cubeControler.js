@@ -1,16 +1,15 @@
-//const Cube = require('../models/Cube_old');
-//const db = require("../db.json");
-
 const Cube = require('../models/Cube');
 const Accessory = require('../models/Accessory');
 
 exports.getCreateCube = (req,res) =>{
+    console.log(req.user)
     res.render('create');   
 }
 
 exports.postCreateCube = async (req, res) =>{
 
-    //save 
+ 
+    console.log(req.user)
     const {name, description, imageUrl, difficultyLevel} = req.body;
     
     let cube = new Cube ({name, description, imageUrl, difficultyLevel});
