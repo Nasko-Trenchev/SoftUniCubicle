@@ -2,7 +2,7 @@ const util = require('util')
 const jwtCallback = require("jsonwebtoken");
 
 const jwt = {
-   sign: util.prmisify(jwtCallback.sign),
+   sign: util.promisify(jwtCallback.sign),
    verify: util.promisify(jwtCallback.verify)
 }
 

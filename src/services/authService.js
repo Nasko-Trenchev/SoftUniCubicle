@@ -24,7 +24,7 @@ exports.login = async (username, password) =>{
     }
 
     const payload = {username: user.username}
-    const token = await jwt.sign(user, config.SECRET, {expiresIn: '2h'});
+    const token = await jwt.sign(payload, config.SECRET, {expiresIn: '2h'});
     
     return token;
 }
