@@ -10,11 +10,11 @@ router.post('/login', async (req, res) =>{
 
     const {username, password} = req.body;  
     try {
-        await authService.login(username, password);
+        const token = await authService.login(username, password);
+        res.cookie('auth', token, {httpOnly: true})
     }
     catch (err){
        console.log(err.message);
-        return res.redirect('/');
     }
 
     res.redirect('/');
@@ -43,4 +43,5 @@ router.post('/register', async (req, res)=>{
 
     res.redirect('/login');
 })
+
 module.exports = router;
