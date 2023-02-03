@@ -11,3 +11,8 @@ exports.generateDifficultyLevel = function (currentLevel){
     const result = difficultyLevels.map(x=>x.key === currentLevel ? {...x, isSelected : true}: x);
     return result;
 }
+
+exports.isOwner = (user, cube)=>{
+
+    return user._id == cube._id;
+}
