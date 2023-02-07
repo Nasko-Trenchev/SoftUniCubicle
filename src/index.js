@@ -8,7 +8,6 @@ const routs = require("./routes");
 const initDatabase = require("./config/databaseInit");
 
 
-
 const app = express();
 
 setupViewEngine(app);

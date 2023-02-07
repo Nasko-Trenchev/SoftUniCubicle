@@ -82,7 +82,6 @@ exports.postEditCube = async (req, res) => {
     const {name, description, imageUrl, difficultyLevel} = req.body;
 
     await cubeService.update(req.params.cubeId, {name, description, imageUrl, difficultyLevel})
-    const cube = await cubeService.getOne(req.params.cubeId).lean();
 
     res.redirect(`/cubes/${req.params.cubeId}/details`);
 }
